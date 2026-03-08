@@ -1,7 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 
 const Excalidraw = dynamic(
   () => import("@excalidraw/excalidraw").then((mod) => mod.Excalidraw),
@@ -10,13 +10,13 @@ const Excalidraw = dynamic(
 
 export default function Whiteboard() {
 
-  const navigate = useNavigate();
+  const router = useRouter();
 
   return (
     <div style={{ height: "100vh", width: "100%" }}>
       <div className="flex items-center justify-between w-[60%] p-4">
         <button
-          onClick={() => navigate("/dashboard")}
+          onClick={() => router.push("/dashboard")}
           className="bg-indigo-600 text-white px-4 py-2 rounded-lg font-semibold"
         >
           Back to home

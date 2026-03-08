@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { Star, NotebookPen, Cloud, ShieldCheck } from "lucide-react";
 import Navbar from "../Navbar";
 import Features from "./Features";
@@ -9,7 +9,7 @@ import Contact from "./Contact";
 
 export default function HomePage() {
 
-  const navigate = useNavigate();
+  const router = useRouter();
 
   return (
     <div className="w-full min-h-screen bg-gray-50 text-gray-800 ">
@@ -25,7 +25,7 @@ export default function HomePage() {
             A simple, powerful note-taking app to organize your thoughts,
             tasks, and ideas anytime, anywhere.
           </p>
-          <button onClick={() => navigate("/dashboard")} className="bg-white text-indigo-600 px-8 py-3 rounded-xl font-semibold shadow hover:scale-105 transition">
+          <button onClick={() => router.push("/dashboard")} className="bg-white text-indigo-600 px-8 py-3 rounded-xl font-semibold shadow hover:scale-105 transition">
             Get Started
           </button>
         </div>
