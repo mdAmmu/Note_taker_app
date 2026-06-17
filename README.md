@@ -1,70 +1,137 @@
-# Note Taker App
+<p align="center">
+  <img src="./public/Project_images/home_page.png" alt="Note Taker App" width="800"/>
+</p>
 
-A modern, powerful, and aesthetically pleasing Note-Taking application built to help you capture your thoughts, manage tasks, and brainstorm visually in one seamless environment.
+<h1 align="center">📝 Note Taker App</h1>
+
+<p align="center">
+  A modern note-taking application with an integrated whiteboard canvas for visual brainstorming — built with Next.js 16, React 19, and Excalidraw.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-16-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js"/>
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React"/>
+  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind"/>
+  <img src="https://img.shields.io/badge/Excalidraw-Canvas-6965DB?style=for-the-badge" alt="Excalidraw"/>
+</p>
+
+---
+
+## 📑 Table of Contents
+
+- [Screenshots](#-screenshots)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Folder Structure](#-folder-structure)
+- [Getting Started](#-getting-started)
+- [Available Scripts](#-available-scripts)
+- [License](#-license)
+
+---
+
+## 📸 Screenshots
+
+| Home Page | Feature Page |
+|:-:|:-:|
+| ![Home](./public/Project_images/home_page.png) | ![Features](./public/Project_images/feature_page%20(1).png) |
+
+| Notes Page | Note Details |
+|:-:|:-:|
+| ![Notes](./public/Project_images/note_page.png) | ![Details](./public/Project_images/notes_detail.png) |
+
+---
 
 ## ✨ Features
 
-- **Intuitive Dashboard**: Easily categorize and organize your notes with titles, descriptions, dynamic themes, categories, and tags.
-- **Create Notes**: Add new notes through a sleek, user-friendly modal pop-up.
-- **Fully Integrated Whiteboard**: Jump into a fully functional digital whiteboard (powered by Excalidraw) directly from your dashboard to sketch, draw, and map out complex ideas.
-- **Beautiful UI/UX**: Crafted with detailed gradient cards, micro-interactions, responsive grids, and modern typography.
-- **Smooth Navigation**: Enjoy instant transitions across your home, dashboard, and whiteboard screens using client-side routing.
+- 📝 **Rich Note Taking** — Create, edit, and organize notes with a clean interface
+- 🎨 **Whiteboard Canvas** — Built-in Excalidraw whiteboard for diagrams, sketches, and visual brainstorming
+- 📊 **Dashboard** — Overview of all your notes and quick access
+- 🗂️ **Note Organization** — Browse, search, and manage notes efficiently
+- 📱 **Responsive Design** — Works seamlessly across desktop and mobile
+- ⚡ **Fast & Modern** — Built on Next.js 16 with React 19 for optimal performance
+
+---
 
 ## 🛠️ Tech Stack
 
-- **Core**: React 19 & Next.js
-- **Routing**: React Router DOM (v7)
-- **Styling**: Tailwind CSS v4
-- **Icons**: Lucide React
-- **Whiteboard Engine**: `@excalidraw/excalidraw`
+| Category | Technology |
+|----------|-----------|
+| **Framework** | Next.js 16 (App Router) |
+| **Language** | TypeScript |
+| **UI Library** | React 19 |
+| **Styling** | Tailwind CSS 4 |
+| **Canvas/Drawing** | Excalidraw |
+| **Icons** | Lucide React, React Icons |
+
+---
+
+## 📁 Folder Structure
+
+```
+note_taker_app/
+├── app/
+│   ├── components/                # 🧩 Shared UI components
+│   ├── dashboard/
+│   │   └── page.tsx               # 📊 Dashboard view
+│   ├── pages/
+│   │   └── Note.tsx               # 📝 Note editor page
+│   ├── whiteboard/
+│   │   └── page.tsx               # 🎨 Excalidraw whiteboard
+│   ├── Navbar.tsx                 # Navigation bar
+│   ├── layout.tsx                 # Root layout
+│   ├── page.tsx                   # Home / landing page
+│   └── globals.css                # Global styles
+├── public/
+│   └── Project_images/            # 📸 Screenshots
+│       ├── home_page.png
+│       ├── feature_page (1).png
+│       ├── note_page.png
+│       └── notes_detail.png
+├── package.json
+├── tsconfig.json
+└── next.config.ts
+```
+
+---
 
 ## 🚀 Getting Started
 
-Follow these instructions to set up the project locally.
-
 ### Prerequisites
 
-You'll need to have [Node.js](https://nodejs.org/en/) installed.
+- **Node.js** 18+
+- **npm**, **yarn**, or **pnpm**
 
-### Installation
-
-1. **Clone the repository** (if you haven't already):
-   ```bash
-   git clone <your-repository-url>
-   ```
-
-2. **Navigate into the project directory**:
-   ```bash
-   cd my-app
-   ```
-
-3. **Install dependencies**:
-   Using npm:
-   ```bash
-   npm install
-   ```
-   Or using yarn/pnpm:
-   ```bash
-   yarn install
-   ```
-
-### Running the Application
-
-Start the development server:
+### Installation & Setup
 
 ```bash
+# 1️⃣ Clone the repository
+git clone <repository-url>
+cd note_taker_app
+
+# 2️⃣ Install dependencies
+npm install
+
+# 3️⃣ Start the development server
 npm run dev
 ```
 
-Your app will be available at [http://localhost:3000](http://localhost:3000).
+🌐 The app will be available at **http://localhost:3000**
 
-## 📂 Project Structure Overview
+> 💡 This is a frontend-only application — no environment variables or database setup required.
 
-- `app/page.tsx`: The main entry point that configures the React Router setup (`/`, `/dashboard`, `/whiteboard`).
-- `app/components/HomePage.tsx`: The vibrant landing page with the Hero section, features overview, reviews, and a contact form.
-- `app/components/Dashboard.tsx`: The core note management interface featuring a multi-column layout, tag filtering, and the note-creation modal.
-- `app/components/WhiteBoard.tsx`: The full-screen blank canvas for drawing, utilizing the Excalidraw package.
+---
 
-## 📜 License
+## 📜 Available Scripts
 
-This project is completely open source and free to use.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Next.js development server |
+| `npm run build` | Create production build |
+| `npm run start` | Start production server |
+
+---
+
+## 📄 License
+
+MIT
